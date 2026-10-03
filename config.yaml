@@ -1,0 +1,472 @@
+# =====================================================================
+#  MUSIC DIGEST SETTINGS
+#  Change this file to change what your digest covers.
+#  Lines starting with # are notes and are ignored. Indentation (the
+#  spaces at the start of lines) matters: copy the pattern around you.
+# =====================================================================
+
+digest_name: Music Digest
+timezone: Asia/Kolkata            # times in the emails use this time zone
+
+
+# ---------------------------------------------------------------------
+# 1. EMAILS
+# ---------------------------------------------------------------------
+email:
+  separate_charts_email: true     # true = two emails: "News" and "Charts & Stats"
+  attach_full_digest: true        # attach a web page with EVERY story found (the email shows the best of each section)
+  max_email_kb: 95                # Gmail trims emails over ~100 KB, so long lists get shortened to fit
+
+
+# ---------------------------------------------------------------------
+# 2. ARTISTS
+#    Headlines naming these artists get their own sections.
+#    - pinned:     always at the very top (artists you're studying closely)
+#    - superstars: the "Superstars" section, grouped by artist
+#    - rising:     a starter list; the charts also spot new breakouts by themselves
+#    A name starting with = is matched exactly, capitals and all
+#    (for names that are also everyday words, like =TWICE).
+#    Left out on purpose because they're common words: Future, Dave, Lisa, V.
+# ---------------------------------------------------------------------
+artists:
+  pinned: []
+
+  superstars:
+    Pop: [Taylor Swift, Sabrina Carpenter, Billie Eilish, Ariana Grande, Olivia Rodrigo, Dua Lipa,
+          Chappell Roan, Lady Gaga, Bruno Mars, Harry Styles, Ed Sheeran, Justin Bieber, Miley Cyrus,
+          Selena Gomez, Katy Perry, Charli xcx, Tate McRae, Gracie Abrams, Benson Boone, Lana Del Rey,
+          Doja Cat, Rihanna, Beyoncé, Coldplay, Imagine Dragons, Teddy Swims, Alex Warren, Lorde, Halsey,
+          Addison Rae, Troye Sivan, Mariah Carey, Adele, Camila Cabello, Hozier, Noah Kahan, Lewis Capaldi,
+          Shawn Mendes, Conan Gray, Zara Larsson, Madonna, Elton John]
+    Hip-hop & R&B: [Drake, Kendrick Lamar, Travis Scott, SZA, The Weeknd, Kanye West, "Tyler, the Creator",
+          J. Cole, Nicki Minaj, Cardi B, Megan Thee Stallion, Doechii, GloRilla, Playboi Carti, Lil Baby,
+          21 Savage, Metro Boomin, Post Malone, Eminem, Jay-Z, Chris Brown, Usher, Frank Ocean, Summer Walker,
+          Brent Faiyaz, Don Toliver, Lil Wayne, A$AP Rocky, Gunna, Young Thug, Lil Uzi Vert, Sexyy Red,
+          Ice Spice, Daniel Caesar, Kehlani, Victoria Monét, Leon Thomas, Snoop Dogg, 50 Cent, Diddy,
+          Rick Ross, Lil Durk, NBA YoungBoy]
+    Country: [Morgan Wallen, Zach Bryan, Luke Combs, Chris Stapleton, Shaboozey, Jelly Roll, Lainey Wilson,
+          Kacey Musgraves, Ella Langley, Riley Green, Megan Moroney, Bailey Zimmerman, Tyler Childers,
+          Luke Bryan, Carrie Underwood, Dolly Parton, Kane Brown, Thomas Rhett, Cody Johnson, Jason Aldean]
+    Rock & alternative: [Metallica, Linkin Park, Foo Fighters, Arctic Monkeys, Oasis, The 1975, Paramore,
+          Twenty One Pilots, Green Day, Red Hot Chili Peppers, Tame Impala, Radiohead, Fontaines D.C.,
+          Sleep Token, Bring Me the Horizon, My Chemical Romance, =U2, The Rolling Stones, Bruce Springsteen,
+          Sam Fender, The Killers, Pearl Jam, boygenius, Phoebe Bridgers, Mitski]
+    Latin: [Bad Bunny, KAROL G, Peso Pluma, Shakira, Rauw Alejandro, Feid, J Balvin, Rosalía, Maluma, Ozuna,
+          Anitta, Myke Towers, Fuerza Regida, Grupo Frontera, Junior H, Natanael Cano, Daddy Yankee, Becky G,
+          Kali Uchis, Young Miko]
+    K-pop: [=BTS, BLACKPINK, Stray Kids, =SEVENTEEN, =TWICE, NewJeans, aespa, ENHYPEN, TOMORROW X TOGETHER,
+          ATEEZ, LE SSERAFIM, ROSÉ, JENNIE, Jung Kook, Jimin, Jisoo, KATSEYE, ILLIT, BABYMONSTER, =IVE, =ITZY]
+    Afrobeats: [Burna Boy, Wizkid, Davido, Tems, Rema, Tyla, Asake, Ayra Starr, Omah Lay, CKay, Fireboy DML,
+          Victony, Olamide]
+    UK: [Stormzy, Central Cee, Little Simz, Santan Dave, RAYE, Lola Young, Olivia Dean, Skepta, Headie One,
+          Jorja Smith, Florence + the Machine, PinkPantheress, Myles Smith, Sam Smith, Lily Allen, Jessie Ware,
+          Wet Leg, Ellie Goulding, Rita Ora]
+    Electronic & dance: [Calvin Harris, David Guetta, Fred again.., Skrillex, Kaytranada, Peggy Gou, Martin Garrix,
+          Marshmello, Disclosure, John Summit, Swedish House Mafia, Four Tet, Charlotte de Witte, Chris Lake,
+          Dom Dolla, Anyma, Diplo, Tiësto, Kygo]
+
+  rising: [sombr, Gigi Perez, Ravyn Lenae, Jessie Murph, Audrey Hobert, Djo, Mk.gee, =Geese, Cameron Winter,
+           Malcolm Todd, The Marías]
+
+  # Other names the press uses. (Accents are handled automatically: Beyoncé also matches Beyonce.)
+  also_known_as:
+    Drake: [Drizzy]
+    Kanye West: [Kanye, =Ye]
+    The Weeknd: [Abel Tesfaye]
+    "Tyler, the Creator": [Tyler The Creator]
+    J. Cole: [J Cole]
+    Jay-Z: [Jay Z]
+    A$AP Rocky: [ASAP Rocky]
+    Diddy: [Sean Combs]
+    NBA YoungBoy: [YoungBoy Never Broke Again]
+    TOMORROW X TOGETHER: [=TXT]
+    Jung Kook: [Jungkook]
+    Florence + the Machine: [Florence and the Machine, Florence Welch]
+    Fred again..: [Fred again]
+    Santan Dave: [=Dave]       # only matches "Dave" written with a capital D
+    Charli xcx: [Charli XCX]
+    Miley Cyrus: [Miley]
+
+  # Also run Google News searches for every superstar (catches outlets not in the feed list).
+  search_superstars: true
+
+
+# ---------------------------------------------------------------------
+# 3. NEWS SECTIONS (by topic)
+#    Each story goes into the section whose words it matches best
+#    (headline words count double). Order = order in the email.
+#    "strong" topics win over the scene/country sections; the others
+#    only take stories that don't belong to a scene or country.
+#    Word rules: "tour" also catches tours/touring; "nominat*" catches
+#    anything starting with nominat; "=EP" means that exact word.
+# ---------------------------------------------------------------------
+topics:
+  - id: radar
+    name: Release radar (announced)
+    short: Announced
+    icon: "📅"
+    keywords: [announc*, "release date", tracklist, "track list", upcoming, "set to release", "due out",
+               pre-save, presave, preorder, pre-order, teas*, snippet, rollout, "next album", "new album",
+               "coming soon", countdown, "cover art"]
+  - id: outnow
+    name: Out now
+    short: Out now
+    icon: "🎧"
+    keywords: [single, "new song", "new music", "out now", "music video", =EP, =LP, premiere, shares, drop*,
+               releas*, listen, "surprise release", "lead single", remix, collab*, "new video", visualizer,
+               "album stream"]
+  - id: charts
+    name: Charts & sales news
+    short: Charts
+    icon: "📈"
+    strong: true
+    keywords: [chart, "billboard 200", "hot 100", "global 200", "artist 100", "no. 1", "number one", "debuts at",
+               first-week, "first week", unit, sales, "most-streamed", "most streamed", "streaming record",
+               record-breaking, riaa, certified, platinum, "top 10", "biggest week", "chart preview"]
+  - id: awards
+    name: Awards
+    short: Awards
+    icon: "🏆"
+    strong: true
+    keywords: [grammy, grammys, award, nominat*, nominee, vmas, amas, "bet awards", "brit awards", brits,
+               "mercury prize", "hall of fame", "recording academy", ceremony, oscars, "academy award", "golden globe",
+               "polaris prize", "juno awards", junos, "cma awards", "acm awards", "mama awards", headies, "ivor novello"]
+  - id: tours
+    name: Tours & live
+    short: Live
+    icon: "🎤"
+    keywords: [tour, concert, residency, festival, headliner, headlining, "to headline", setlist, tickets, lineup, line-up, stadium,
+               arena, "live debut", gig, coachella, glastonbury, "sold out", "sold-out", livestream, perform*]
+  - id: legal
+    name: Legal, drama & incidents
+    short: Drama
+    icon: "⚖️"
+    strong: true
+    keywords: [lawsuit, sue, sued, suing, court, arrest, charged, feud, beef, diss, controvers*, allegation*,
+               alleged, accuse*, backlash, boycott, slam*, apolog*, leak, hospitali*, banned, cancels,
+               cancelled, canceled, postpone*, "calls out", "fires back", trial, sentenced, settlement,
+               copyright, plagiar*, copying]
+  - id: passings
+    name: Passings & tributes
+    short: RIP
+    icon: "🕊️"
+    strong: true
+    keywords: [dies, died, "passed away", "dead at", obituary, tribute, "rest in peace", "dies aged", funeral]
+  - id: industry
+    name: Industry & business
+    short: Business
+    icon: "💼"
+    strong: true
+    keywords: [label, "record deal", "signs with", "signs to", catalog, catalogue, royalt*, publishing,
+               acqui*, merger, revenue, earnings, layoff*, "joint venture", =UMG, "universal music",
+               "sony music", "warner music", "live nation", ticketmaster, executive, =CEO, appoint*, hires,
+               "music industry", investment, valuation]
+  - id: platforms
+    name: Streaming, platforms & AI
+    short: Platforms
+    icon: "📱"
+    strong: true
+    keywords: [spotify, "apple music", "youtube music", tiktok, "amazon music", soundcloud, deezer, tidal,
+               =AI, "artificial intelligence", "ai-generated", algorithm, playlist*, payout*, "per stream",
+               subscription, "price increase", "streaming service", "streaming fraud"]
+  - id: features
+    name: Interviews, reviews & features
+    short: Feature
+    icon: "🗣️"
+    keywords: [interview, "talks", "opens up", reflects, review, ranked, ranking, "best of", essay,
+               "in conversation", "behind the", "the making of", "every song", "albums of the week"]
+
+
+# ---------------------------------------------------------------------
+# 4. ARTIST TYPES (rising & independent)
+# ---------------------------------------------------------------------
+rising_keywords: [rising, breakout, breakthrough, "to watch", emerging, newcomer, "debut single", "debut ep",
+                  "debut album", "first single", buzzy, viral, "next big", "on the rise", "one to watch",
+                  "new artist", "up-and-coming", "band to watch"]
+independent_keywords: ["independent artist", "independent artists", "independent musician", "indie artist",
+                       unsigned, self-released, "self-release", =DIY, bandcamp, distrokid, tunecore, "cd baby",
+                       "without a label", independently, "direct-to-fan", "fan-funded", patreon, "own label",
+                       "independent label", "artist-owned"]
+
+
+# ---------------------------------------------------------------------
+# 5. COUNTRIES
+#    A story lands here when it's clearly about that country and
+#    doesn't belong in an earlier section. Copy a block to add a country.
+# ---------------------------------------------------------------------
+regions:
+  - id: us
+    name: USA
+    icon: "🇺🇸"
+    keywords: [=U.S., =US, =USA, American, America, Nashville, Atlanta, Houston, Chicago, "Los Angeles",
+               "New York", Brooklyn, Detroit, Memphis, Texas, California, Miami, "Grand Ole Opry", Lollapalooza,
+               Bonnaroo, "Madison Square Garden", "Super Bowl", "Hollywood Bowl"]
+  - id: uk
+    name: UK
+    icon: "🇬🇧"
+    keywords: [=UK, =U.K., British, Britain, London, Manchester, Liverpool, Glasgow, Edinburgh, Birmingham,
+               Bristol, Leeds, Sheffield, Newcastle, Scotland, Scottish, Wales, Welsh, "BRIT Awards", =BRITs,
+               "Mercury Prize", "Official Charts", "Radio 1", =BBC, Glastonbury, "Reading Festival",
+               "Reading & Leeds", Wembley, "Hyde Park", "Isle of Wight", grime, "UK drill", "Ivor Novello"]
+  - id: ca
+    name: Canada
+    icon: "🇨🇦"
+    enabled: false
+    keywords: [Canada, Canadian, Toronto, Montreal, Vancouver, Juno, "Polaris Prize"]
+  - id: au
+    name: Australia
+    icon: "🇦🇺"
+    enabled: false
+    keywords: [Australia, Australian, Sydney, Melbourne, Brisbane, =ARIA, "triple j"]
+  - id: in
+    name: India
+    icon: "🇮🇳"
+    enabled: false
+    keywords: [India, Indian, Mumbai, Delhi, Bollywood, Punjabi, Bengaluru, Hyderabad, Chennai, Kolkata]
+
+
+# ---------------------------------------------------------------------
+# 6. SCENES
+#    Genre and underground scenes. Stories from sites tagged with a
+#    scene (see the source lists below) count extra towards it.
+# ---------------------------------------------------------------------
+scenes:
+  - id: hiphop
+    name: Hip-hop & R&B
+    icon: "🎙️"
+    keywords: [rap, rapper, hip-hop, "hip hop", "r&b", =R&B, mixtape, drill, trap, freestyle, cypher, grime,
+               "xxl freshman", "diss track"]
+  - id: underground
+    name: Underground & alternative
+    icon: "🕳️"
+    keywords: [underground, indie, punk, post-punk, shoegaze, hardcore, emo, noise, experimental, "lo-fi",
+               garage, alternative, "alt-", psych, ambient, "art rock", "math rock", "dream pop", slowcore,
+               "diy scene", "basement show"]
+  - id: electronic
+    name: Electronic & dance
+    icon: "🎛️"
+    keywords: [=DJ, techno, house, =EDM, "dance music", rave, club, "boiler room", ibiza, "drum and bass",
+               "drum & bass", dubstep, "uk garage", trance, "b2b", "dj set", "mix of the day"]
+  - id: rock
+    name: Rock & metal
+    icon: "🎸"
+    keywords: ["rock band", "rock music", "rock star", rocker, "hard rock", "indie rock", "punk rock", "alt-rock",
+               "classic rock", "rock legend", "rock icon", metal, guitarist, drummer, frontman, frontwoman, riff, grunge]
+  - id: country
+    name: Country & Americana
+    icon: "🤠"
+    keywords: [country, nashville, opry, =CMA, =ACM, americana, bluegrass, honky, "outlaw country", "cma fest"]
+  - id: latin
+    name: Latin
+    icon: "💃"
+    keywords: [latin, latino, latina, reggaeton, "regional mexican", corrido*, "latin grammy", "música",
+               bachata, salsa, cumbia, "urbano"]
+  - id: kpop
+    name: K-pop
+    icon: "💜"
+    keywords: [k-pop, kpop, "k-pop idol", "idol group", "girl group", "boy group", =HYBE, "sm entertainment", =JYP, =YG,
+               "music bank", inkigayo, "m countdown", "mama awards", "mini album", "comeback showcase"]
+  - id: afrobeats
+    name: Afrobeats & African music
+    icon: "🌍"
+    keywords: [afrobeats, afrobeat, afropop, amapiano, nigerian, nigeria, lagos, ghana, ghanaian, "south african",
+               headies, "afro house", "alté"]
+
+
+# ---------------------------------------------------------------------
+# 7. NEWS WEBSITES (RSS feeds)
+#    tags say what a site specialises in, so its stories count towards
+#    that section: rising, independent, industry, charts, uk, us, or any
+#    scene id above (hiphop, underground, electronic, rock, country,
+#    latin, kpop, afrobeats).
+#    Billboard, Rolling Stone and Variety block automated readers, so
+#    they come in through Google News searches below instead.
+# ---------------------------------------------------------------------
+feeds:
+  # --- general & US ---
+  - {name: Pitchfork, url: "https://pitchfork.com/feed/feed-news/rss", tags: [underground]}
+  - {name: Consequence, url: "https://consequence.net/category/music/feed/"}
+  - {name: Stereogum, url: "https://www.stereogum.com/feed/", tags: [underground]}
+  - {name: Stereogum Band to Watch, url: "https://www.stereogum.com/category/franchises/band-to-watch/feed/", tags: [rising, underground], stale_days: 120}
+  - {name: Spin, url: "https://www.spinmagazine.com/feed/"}
+  - {name: Uproxx Music, url: "https://uproxx.com/music/feed/"}
+  - {name: The Fader, url: "https://www.thefader.com/feed", tags: [rising]}
+  - {name: XXL, url: "https://www.xxlmag.com/feed/", tags: [hiphop, us]}
+  - {name: HotNewHipHop, url: "https://www.hotnewhiphop.com/feed", tags: [hiphop, us]}
+  # --- UK ---
+  - {name: NME, url: "https://www.nme.com/news/music/feed", tags: [uk]}
+  - {name: The Guardian, url: "https://www.theguardian.com/music/rss", tags: [uk]}
+  - {name: Dork, url: "https://readdork.com/feed/", tags: [uk, rising]}
+  - {name: The Line of Best Fit, url: "https://www.thelineofbestfit.com/feed", tags: [uk, rising, underground]}
+  # --- underground, indie & independent artists ---
+  - {name: Bandcamp Daily, url: "https://daily.bandcamp.com/feed", tags: [underground, independent]}
+  - {name: Gorilla vs. Bear, url: "https://www.gorillavsbear.net/feed/", tags: [underground, rising]}
+  - {name: EARMILK, url: "https://earmilk.com/feed/", tags: [independent, rising]}
+  - {name: Ari's Take, url: "https://aristake.com/feed/", tags: [independent], stale_days: 30}
+  - {name: DIY Musician (CD Baby), url: "https://diymusician.cdbaby.com/feed/", tags: [independent], stale_days: 30}
+  # --- electronic ---
+  - {name: Mixmag, url: "https://mixmag.net/rss.xml", tags: [electronic, uk], limit: 20}
+  - {name: Dancing Astronaut, url: "https://dancingastronaut.com/feed/", tags: [electronic]}
+  # --- country, Latin, K-pop ---
+  - {name: Saving Country Music, url: "https://www.savingcountrymusic.com/feed/", tags: [country]}
+  - {name: Taste of Country, url: "https://tasteofcountry.com/feed/", tags: [country]}
+  - {name: Remezcla, url: "https://remezcla.com/feed/", tags: [latin]}
+  - {name: Soompi, url: "https://www.soompi.com/category/music/feed", tags: [kpop]}
+  # --- industry ---
+  - {name: Music Business Worldwide, url: "https://www.musicbusinessworldwide.com/feed/", tags: [industry]}
+  - {name: Digital Music News, url: "https://www.digitalmusicnews.com/feed/", tags: [industry], limit: 40}
+  # --- Reddit usually blocks GitHub's servers; these work better on your own computer ---
+  - {name: r/popheads, url: "https://www.reddit.com/r/popheads/top/.rss?t=day", enabled: false}
+  - {name: r/hiphopheads, url: "https://www.reddit.com/r/hiphopheads/top/.rss?t=day", tags: [hiphop], enabled: false}
+
+
+# ---------------------------------------------------------------------
+# 8. GOOGLE NEWS SEARCHES
+#    Cover sites without feeds and the wider web. Tips: "exact phrase",
+#    OR between options, site:example.com for one website.
+#    edition: us or uk (which Google News edition to search).
+# ---------------------------------------------------------------------
+google_news:
+  enabled: true
+  max_per_search: 25
+  searches:
+    # big outlets that block automated readers, read via Google News headlines
+    - {name: Billboard, query: "site:billboard.com", limit: 40}
+    - {name: Billboard charts, query: 'site:billboard.com ("Hot 100" OR "Billboard 200" OR "Global 200" OR "Global Excl" OR "Artist 100" OR "Emerging Artists")', tags: [charts, billboard]}
+    - {name: Rolling Stone, query: "site:rollingstone.com music"}
+    - {name: Variety, query: "site:variety.com music"}
+    - {name: Complex, query: "site:complex.com music", tags: [hiphop]}
+    # stats & sales
+    - {name: HITS Daily Double, query: "site:hitsdailydouble.com", tags: [charts, sales, industry]}
+    - {name: First-week sales, query: '("first-week" OR "first week" OR "projected to debut") (sales OR units OR streams) album', tags: [charts, sales]}
+    # topics
+    - {name: Award shows, query: 'Grammys OR "Latin Grammys" OR VMAs OR "American Music Awards" OR "Billboard Music Awards" OR "BET Awards" OR "CMA Awards" OR "MAMA Awards" OR "BRIT Awards"'}
+    - {name: Release roundups, query: '"New Music Friday" OR "albums out this week" OR "new albums this week" OR "dropping tonight" OR "best new songs"'}
+    # artist types
+    - {name: Rising artists, query: '("breakout artist" OR "artist to watch" OR "artists to watch" OR "rising star" OR "emerging artist" OR "breakthrough artist") music', tags: [rising]}
+    - {name: Independent artists, query: '("independent artist" OR "independent artists" OR "unsigned artist" OR DistroKid OR TuneCore OR Bandcamp OR "CD Baby") music', tags: [independent]}
+    - {name: Hypebot, query: "site:hypebot.com", tags: [independent, industry]}
+    # scenes
+    - {name: Electronic press, query: "site:ra.co/news OR site:djmag.com/news", tags: [electronic]}
+    - {name: Afrobeats, query: '(Afrobeats OR amapiano OR site:notjustok.com OR site:okayafrica.com) (song OR album OR artist OR singer OR star)', tags: [afrobeats]}
+    - {name: K-pop press, query: "site:allkpop.com OR site:soompi.com", tags: [kpop], limit: 15}
+    - {name: Latin music, query: 'site:billboard.com (latin OR reggaeton OR "regional mexican")', tags: [latin]}
+    - {name: Underground press (US), query: "site:brooklynvegan.com OR site:pastemagazine.com/music", tags: [underground, us]}
+    # UK
+    - {name: BBC music, query: "site:bbc.co.uk (singer OR band OR rapper OR album OR song OR musician)", edition: uk, tags: [uk]}
+    - {name: UK indie press, query: "site:clashmusic.com OR site:diymag.com OR site:thequietus.com", edition: uk, tags: [uk, underground]}
+    - {name: Official Charts news, query: "site:officialcharts.com", edition: uk, tags: [uk, charts]}
+    - {name: Music Week, query: "site:musicweek.com", edition: uk, tags: [uk, industry]}
+    - {name: UK rap & grime, query: '(grime OR "UK rap" OR "UK drill" OR "UK rapper")', edition: uk, tags: [uk, hiphop]}
+
+  # Searches for the artists in section 2 are added automatically, in batches.
+  artist_query_extra: "(album OR single OR song OR tour OR chart OR music OR rollout)"
+  artists_per_search: 10
+  max_per_artist_search: 30
+
+  # Results from these "sources" are ignored (social posts, ticket listings, video pages).
+  blocked_sources: [YouTube, instagram.com, facebook.com, x.com, Twitter, TikTok, SoundCloud, eventbrite.com,
+                    AXS, Ticketmaster, Songkick, Bandsintown, Spotify, Apple Music, Reddit, LinkedIn, Pinterest,
+                    Threads, Shazam, Amazon, Discogs, setlist.fm, Last.fm, StubHub, SeatGeek, Vivid Seats]
+  # Headlines matching these are ignored everywhere (ticket and tour-date listing pages).
+  blocked_title_patterns: ['tour dates & shows', 'concert tour dates', '\btickets\b.*\b20\d\d-20\d\d\b',
+                           'presale code', '^tickets for']
+
+
+# ---------------------------------------------------------------------
+# 9. CHARTS & STATS (the "Charts & Stats" email)
+#    type: officialcharts (officialcharts.com pages) or kworb (kworb.net pages)
+#    weekly: true for charts that update once a week. They're shown in
+#    full when they update and as a one-line reminder on other days.
+#    The UK Official Charts site publishes the Billboard Hot 100 and
+#    Billboard 200 (top 20) under licence. Billboard's own site blocks
+#    automated readers, so Global 200 / Artist 100 come as headlines.
+# ---------------------------------------------------------------------
+charts:
+  - {id: hot100, name: Billboard Hot 100, group: United States, type: officialcharts, weekly: true, top: 20,
+     url: "https://www.officialcharts.com/charts/billboard-hot-100-chart/"}
+  - {id: bb200, name: Billboard 200, group: United States, type: officialcharts, weekly: true, top: 20, kind: albums,
+     url: "https://www.officialcharts.com/charts/billboard-200/"}
+  - {id: spotify_us, name: Spotify US (daily), group: United States, type: kworb, top: 10,
+     url: "https://kworb.net/spotify/country/us_daily.html"}
+  - {id: youtube_us, name: YouTube US (daily), group: United States, type: kworb, top: 10,
+     url: "https://kworb.net/youtube/insights/us_daily.html"}
+  - {id: radio_us, name: US radio airplay (estimate), group: United States, type: kworb, top: 10,
+     url: "https://kworb.net/radio/"}
+  - {id: apple_us, name: Apple Music US, group: United States, type: kworb, top: 10, enabled: false,
+     url: "https://kworb.net/charts/apple_s/us.html"}
+
+  - {id: uk_singles, name: UK Official Singles, group: United Kingdom, type: officialcharts, weekly: true, top: 20,
+     url: "https://www.officialcharts.com/charts/singles-chart/"}
+  - {id: uk_albums, name: UK Official Albums, group: United Kingdom, type: officialcharts, weekly: true, top: 20, kind: albums,
+     url: "https://www.officialcharts.com/charts/albums-chart/"}
+  - {id: spotify_uk, name: Spotify UK (daily), group: United Kingdom, type: kworb, top: 10,
+     url: "https://kworb.net/spotify/country/gb_daily.html"}
+  - {id: uk_indie_singles, name: UK Independent Singles, group: Independent artists, type: officialcharts, weekly: true, top: 10,
+     url: "https://www.officialcharts.com/charts/independent-singles-chart/"}
+  - {id: uk_indie_albums, name: UK Independent Albums, group: Independent artists, type: officialcharts, weekly: true, top: 10, kind: albums,
+     url: "https://www.officialcharts.com/charts/independent-albums-chart/"}
+  - {id: uk_indie_breakers, name: UK Indie Singles Breakers, group: Independent artists, type: officialcharts, weekly: true, top: 10,
+     url: "https://www.officialcharts.com/charts/independent-singles-breakers-chart/"}
+  - {id: uk_hiphop, name: UK Hip Hop & R&B Singles, group: Scenes, type: officialcharts, weekly: true, top: 10,
+     url: "https://www.officialcharts.com/charts/official-hip-hop-and-r-and-b-singles-chart/"}
+  - {id: uk_afrobeats, name: UK Afrobeats Chart, group: Scenes, type: officialcharts, weekly: true, top: 10,
+     url: "https://www.officialcharts.com/charts/afrobeats-chart/"}
+  - {id: uk_dance, name: UK Dance Singles, group: Scenes, type: officialcharts, weekly: true, top: 10, enabled: false,
+     url: "https://www.officialcharts.com/charts/dance-singles-chart/"}
+  - {id: uk_rock, name: UK Rock & Metal Singles, group: Scenes, type: officialcharts, weekly: true, top: 10, enabled: false,
+     url: "https://www.officialcharts.com/charts/rock-and-metal-singles-chart/"}
+
+  - {id: spotify_global, name: Spotify Global (daily), group: Global, type: kworb, top: 20,
+     url: "https://kworb.net/spotify/country/global_daily.html"}
+  - {id: spotify_global_weekly, name: Spotify Global (weekly), group: Global, type: kworb, weekly: true, top: 10,
+     url: "https://kworb.net/spotify/country/global_weekly.html"}
+  - {id: apple_ww, name: Apple Music Worldwide Songs, group: Global, type: kworb, top: 10,
+     url: "https://kworb.net/apple_songs/index.html"}
+  - {id: apple_ww_albums, name: Apple Music Worldwide Albums, group: Global, type: kworb, top: 10, kind: albums,
+     url: "https://kworb.net/apple_albums/index.html"}
+  - {id: itunes_ww, name: iTunes Worldwide Songs, group: Global, type: kworb, top: 10, enabled: false,
+     url: "https://kworb.net/ww/index.html"}
+
+  - {id: shazam_ww, name: Shazam Worldwide, group: Discovery (Shazam), type: kworb, top: 10,
+     url: "https://kworb.net/charts/shazam/ww.html"}
+  - {id: shazam_us, name: Shazam US, group: Discovery (Shazam), type: kworb, top: 10,
+     url: "https://kworb.net/charts/shazam/us.html"}
+  - {id: shazam_uk, name: Shazam UK, group: Discovery (Shazam), type: kworb, top: 10,
+     url: "https://kworb.net/charts/shazam/uk.html"}
+
+# How a song counts as a "breakout" (artists not in your superstar list):
+breakouts:
+  new_entry_top: 100        # a new entry anywhere in a chart's top 100
+  jump_at_least: 15         # or a jump of at least this many places
+  shazam_top: 25            # or any spot in a Shazam top 25 (people looking it up = early buzz)
+
+
+# ---------------------------------------------------------------------
+# 10. OPTIONAL AI SUMMARY
+#     Add an Anthropic API key (ANTHROPIC_API_KEY) to get "Today in 60
+#     seconds", a one-line read on each big section, and a takeaway for
+#     your own rollout at the top of the News email.
+# ---------------------------------------------------------------------
+ai:
+  enabled: auto                     # auto = on only when the key is set; false = always off
+  model: claude-haiku-4-5-20251001  # the cheapest, fastest Claude model
+  max_headlines: 160
+
+
+# ---------------------------------------------------------------------
+# 11. FINE-TUNING
+# ---------------------------------------------------------------------
+settings:
+  biggest_story_min_outlets: 3  # covered by this many outlets = "Biggest stories"
+  first_run_hours: 24           # how far back the very first digest looks
+  overlap_hours: 2              # re-check this much before the last digest, for late-posted stories
+  stale_feed_days: 7            # warn when a feed hasn't posted for this many days
+  calendar_days_ahead: 45       # how far ahead the release calendar looks
+  # Outlets that get a ranking boost when choosing which stories to show in full.
+  top_outlets: [Billboard, Rolling Stone, Variety, Pitchfork, NME, The Guardian, BBC, Complex, XXL, Stereogum,
+                Consequence, Uproxx, The Fader, Hits Daily Double, Music Business Worldwide, MusicWeek, Music Week,
+                The New York Times, Associated Press, AP News, Reuters, The Hollywood Reporter, Vulture, NPR,
+                People, Entertainment Weekly, Spin, Dork, The Line of Best Fit, Resident Advisor, DJ Mag, Mixmag,
+                The Quietus, clashmusic.com, DIY Magazine, Bandcamp Daily, Soompi, Remezcla, Saving Country Music]
+  user_agent: "MusicDigest/2.0 (personal music news digest; RSS reader)"
